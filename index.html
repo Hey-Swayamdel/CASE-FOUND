@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CASE//FOUND</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>CASE//FOUND</h2>
+
+        <a href="#case-board">CASE BOARD</a>
+        <a href="#report-case">REPORT CASE</a>
+        <a href="#about">ABOUT</a>
+
+    </nav>
+
+    <p class="system-label">// CAMPUS INVESTIGATION DATABASE</p>
+
+    <h1>CASE//FOUND: CAMPUS EDITION</h1>
+    
+    <p class="warning">⚠ CLASSIFIED CAMPUS PROPERTY SYSTEM</p>
+    <section id="case-board">
+
+        <h2>ACTIVE CASES</h2>
+
+        <input type="text" id="search-case" placeholder="Search for an item...">
+
+        <div class="case-card">
+
+        <h3>CASE #001 - MISSING LAPTOP BAG</h3>
+
+        <p>Last Known Location:Campus 1 Block A</p>
+
+        <p>Status: <span class="status-open">OPEN</span></p>
+
+        </div>
+
+        <div class="case-card">
+
+        <h3>CASE #002 - MISSING WATER BOTTLE</h3>
+
+        <p>Last Known Location:Campus 3 Block D</p>
+
+        <p>Status: <span class="status-open">OPEN</span></p>
+
+        </div>
+
+        <div id="new-cases"></div>
+
+    </section>
+    
+    <p>Every missing item has a story.</p>
+
+    <button>OPEN CASE</button>
+
+    <section id="report-case">
+
+        <h2>REPORT A CASE</h2>
+        <p>Have you lost or found an item?</p>
+
+        <form id="case-form">
+            <label for="case-type">CASE TYPE</label>
+            <select id="case-type">
+                <option>LOST ITEM</option>
+                <option>FOUND ITEM</option>
+            </select>
+
+            <label for="item-name">ITEM NAME</label>
+            <input type="text" id="item-name" placeholder="Example: Black HP Laptop Bag">
+            <label for="location">LOCATION</label>
+            <input type="text" id="location" placeholder="Example:Central Library">
+            <label for="date">DATE REPORTED</label>
+            <input type="date" id="date">
+            <label for="description">DESCRIPTION</label>
+            <textarea id="description" placeholder="Describe the item and what happened..."></textarea>
+            <button type="button" id="submit-case">SUBMIT CASE</button>
+        </form>
+
+
+
+    </section>
+
+    <section id="about">
+
+    <h2>ABOUT CASE//FOUND</h2>
+
+    <p>
+        CASE//FOUND is a campus lost and found investigation system.
+    </p>
+
+    </section>
+    <script src="script.js"></script>
+
+</body>
+</html>
