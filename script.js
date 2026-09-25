@@ -8,6 +8,7 @@ let description = document.getElementById("description");
 
 let newCases = document.getElementById("new-cases");
 let caseForm = document.getElementById("case-form");
+let searchCase = document.getElementById("search-case");
 
 let CaseNumber=3;
 
@@ -61,4 +62,24 @@ submitButton.addEventListener("click", function()
     
     CaseNumber= CaseNumber + 1;
     caseForm.reset();
+});
+searchCase.addEventListener("input", function() {
+
+    let searchText = searchCase.value.toLowerCase();
+
+    let caseCards = document.querySelectorAll(".case-card");
+
+    caseCards.forEach(function(card) {
+
+        let caseText = card.textContent.toLowerCase();
+
+        if (caseText.includes(searchText)) {
+            card.style.display = "block";
+        } 
+        else {
+            card.style.display = "none";
+        }
+
+    });
+
 });
